@@ -1,0 +1,152 @@
+ @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
+:root{
+--Very-dark-blue: hsl(233, 47%, 7%) ;
+--Dark-desaturated-blue: hsl(244, 38%, 16%); 
+--Soft-violet: hsl(277, 64%, 61%); 
+--White:hsl(0, 0%, 100%); 
+--Slightly-transparent-white: hsla(0, 0%, 100%, 0.75);
+--Slightly-transparent-white: hsla(0, 0%, 100%, 0.6);
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    background: var(--Very-dark-blue);
+    color: var(--White);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center ;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    max-width: 22rem;
+    background-color: var(--Dark-desaturated-blue);
+    border-bottom-right-radius: 0.7rem;
+    border-bottom-left-radius: 0.7rem;
+    margin: 6rem 0 4rem 0;
+}
+
+
+#card-img{
+    filter:opacity(0.3) drop-shadow(0 0 hsl(285, 98%, 48%));
+    border-top-right-radius: 0.7rem;
+    border-top-left-radius: 0.7rem;
+}
+
+#title{
+    font-family:"inter" ;
+    color: var(--White);
+    text-align: center;
+    padding: 1.5rem 1rem 0 1rem;
+}
+
+#title span{
+    color: var(--Soft-violet);
+}
+
+.paragraph{
+    color: var(--Slightly-transparent-white);
+    font-family: "lexend deca";
+    text-align: center;
+    line-height: 1.5rem;
+    padding:  0 2rem 1rem 2rem;
+    margin-top: -0.3rem;
+}
+
+.stats{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.stats span{
+    display: block;
+    text-align: center;
+}
+
+.stat-number{
+    color: var(--White);
+    font-family: "inter";
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.stat-text{
+    color: hsla(0, 0%, 100%, 0.40);
+    font-size: 0.8rem;
+    font-weight: normal;
+    padding: 0.5rem 0 2rem 0;
+    letter-spacing: 0.08rem;
+}
+
+.stat-number:hover{
+    cursor: not-allowed;
+    color: var(--Soft-violet);
+}
+
+.stat-text:hover{
+    color: var(--White);
+}
+
+@media only screen and (min-width:1440px){
+    .card{
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: center;
+        border-bottom-right-radius: 0;
+        border-top-left-radius: 0.7rem;
+        max-width: 60rem;
+    }
+    
+    #card-img{
+      max-width: 27rem;
+      height: 23rem;
+      border-bottom-right-radius: 0.7rem;
+      border-top-left-radius: 0;
+      object-fit:fill;
+    }
+
+    .desktop-v{
+        display: flex;
+        flex-direction: column;
+        margin-left: 3rem;
+        padding: 2rem 0;
+    }
+
+    #title{
+        text-align: left;
+        padding: 0 8rem  0 0;
+    }
+    
+    .paragraph{
+        text-align: left;
+        padding-right: 4rem;
+        margin-left: -2rem;
+    }
+
+    .stats{
+        display: flex;
+        flex-direction: row;
+        margin-left: -1.5rem;
+    }
+
+    .stat-number{
+        margin-right: 2.5rem;
+    }
+
+    .stat-text{
+        margin-left: 2rem;
+    }
+
+   .last{
+    margin-left: 0.5rem;
+   }
+}
